@@ -1,6 +1,4 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-
-import appCss from "../styles.css?url";
+import { Outlet, Link, createRootRoute } from "@tanstack/react-router";
 import { Loader } from "@/components/Loader";
 import { CursorGlow } from "@/components/CursorGlow";
 import { Particles } from "@/components/Particles";
@@ -31,56 +29,9 @@ function NotFoundComponent() {
 }
 
 export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Arooj Shahzadi — Teacher · Artist · Designer · BSSE" },
-      { name: "description", content: "Portfolio of Arooj Shahzadi — teacher, digital artist, social media designer, and BSSE student crafting luxe, glowing experiences." },
-      { name: "author", content: "Arooj Shahzadi" },
-      { property: "og:site_name", content: "Arooj Shahzadi" },
-      { property: "og:title", content: "Arooj Shahzadi — Teacher · Artist · Designer · BSSE" },
-      { property: "og:description", content: "Portfolio of Arooj Shahzadi — teacher, digital artist, social media designer, and BSSE student crafting luxe, glowing experiences." },
-      { property: "og:type", content: "website" },
-      { property: "og:image", content: "/og-image.svg" },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
-      { property: "og:url", content: "https://arooj-shahzadi.vercel.app" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Arooj Shahzadi — Teacher · Artist · Designer · BSSE" },
-      { name: "twitter:description", content: "Portfolio of Arooj Shahzadi — teacher, digital artist, social media designer, and BSSE student crafting luxe, glowing experiences." },
-      { name: "twitter:image", content: "/og-image.svg" },
-    ],
-    links: [
-      {
-        rel: "icon",
-        href: "/favicon.svg",
-        type: "image/svg+xml",
-      },
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   return (
