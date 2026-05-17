@@ -42,11 +42,14 @@ export const Route = createRootRoute({
       { property: "og:title", content: "Arooj Shahzadi — Teacher · Artist · Designer · BSSE" },
       { property: "og:description", content: "Portfolio of Arooj Shahzadi — teacher, digital artist, social media designer, and BSSE student crafting luxe, glowing experiences." },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: "https://aroojshahzadi.lovable.app/og-image.jpg" },
+      { property: "og:image", content: "/og-image.svg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:url", content: "https://arooj-shahzadi.vercel.app" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Arooj Shahzadi — Teacher · Artist · Designer · BSSE" },
       { name: "twitter:description", content: "Portfolio of Arooj Shahzadi — teacher, digital artist, social media designer, and BSSE student crafting luxe, glowing experiences." },
-      { name: "twitter:image", content: "https://aroojshahzadi.lovable.app/og-image.jpg" },
+      { name: "twitter:image", content: "/og-image.svg" },
     ],
     links: [
       {
