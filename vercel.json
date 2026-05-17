@@ -1,9 +1,9 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist",
+  "outputDirectory": "dist/client",
   "rewrites": [
     {
-      "source": "/(?!api/|_next/|_vercel|favicon.ico|og-image|public/)",
+      "source": "/(?!_next|_vercel|api|assets|favicon|og-image)",
       "destination": "/index.html"
     }
   ]
