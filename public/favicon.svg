@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="fav-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+    <filter id="fav-glow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Dark background -->
+  <rect width="256" height="256" fill="#0a0a0a"/>
+  
+  <!-- Stylized A logo -->
+  <g filter="url(#fav-glow)">
+    <!-- Left diagonal -->
+    <path d="M 75 180 L 128 50 L 155 180 Z" fill="none" stroke="url(#fav-grad)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Horizontal bar -->
+    <line x1="90" y1="130" x2="166" y2="130" stroke="url(#fav-grad)" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Subtle glow background circle -->
+  <circle cx="128" cy="128" r="115" fill="none" stroke="url(#fav-grad)" stroke-width="0.5" opacity="0.2"/>
+</svg>
